@@ -23,7 +23,7 @@ namespace SageOneApi.Requests
 
 		public PagingResponse<Item> Get(string filter = "", int skip = 0, bool includeAdditionalItemPrices=false)
 		{
-			var url = string.Format("Item/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
+			var url = string.Format("Item/Get?apikey={0}&companyid={1}&orderby=ID", _apiKey, _companyId);
 
 			if (!string.IsNullOrEmpty(filter))
 				url = string.Format("Item/Get?apikey={0}&companyid={1}&$filter={2}", _apiKey, _companyId, filter);
