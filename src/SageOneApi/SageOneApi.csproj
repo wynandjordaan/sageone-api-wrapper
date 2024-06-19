@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SageOneApi</RootNamespace>
     <AssemblyName>SageOneApi</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,8 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RestSharp, Version=105.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.105.2.2\lib\net45\RestSharp.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\packages\RestSharp.105.2.2\lib\net45\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,6 +69,7 @@
     <Compile Include="Interfaces\IPurchaseOrderRequest.cs" />
     <Compile Include="Interfaces\IQuoteRequest.cs" />
     <Compile Include="Interfaces\ISalesRepresentativeRequest.cs" />
+    <Compile Include="Interfaces\ISupplierReturnRequest.cs" />
     <Compile Include="Interfaces\ISupplierInvoiceRequest.cs" />
     <Compile Include="Interfaces\ISupplierRequest.cs" />
     <Compile Include="Interfaces\ITaxInvoiceRequest.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Models\Quote.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierInvoice.cs" />
+    <Compile Include="Models\SupplierReturn.cs" />
     <Compile Include="Models\TaxInvoice.cs" />
     <Compile Include="Models\CommercialDocumentLine.cs" />
     <Compile Include="Models\TaxType.cs" />
@@ -136,6 +138,7 @@
     <Compile Include="Requests\QuoteRequest.cs" />
     <Compile Include="Requests\RequestBase.cs" />
     <Compile Include="Requests\SalesRepresentativeRequest.cs" />
+    <Compile Include="Requests\SupplierReturnRequest.cs" />
     <Compile Include="Requests\SupplierInvoiceRequest.cs" />
     <Compile Include="Requests\SupplierRequest.cs" />
     <Compile Include="Requests\TaxInvoiceRequest.cs" />
